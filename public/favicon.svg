@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M100 10C50.294 10 10 50.294 10 100C10 149.706 50.294 190 100 190" stroke="#a3e635" stroke-width="6" stroke-linecap="round" />
+    <path d="M130 20C155 35 175 60 185 90" stroke="#a3e635" stroke-width="8" stroke-linecap="round" />
+    <path d="M110 30C140 40 160 65 170 95" stroke="#a3e635" stroke-width="12" stroke-linecap="round" />
+    <path d="M40 160C60 180 90 195 120 190" stroke="#a3e635" stroke-width="10" stroke-linecap="round" />
+    <path d="M60 175C80 190 110 195 140 185" stroke="#a3e635" stroke-width="14" stroke-linecap="round" />
+    
+    <circle cx="185" cy="90" r="6" fill="#a3e635" />
+    <circle cx="170" cy="95" r="8" fill="#a3e635" />
+    <circle cx="40" cy="160" r="7" fill="#a3e635" />
+    <circle cx="60" cy="175" r="9" fill="#a3e635" />
+
+    <text x="100" y="125" font-family="'Inter', 'Outfit', sans-serif" font-size="68" font-weight="800" fill="#a3e635" text-anchor="middle" letter-spacing="-3">
+        Q
+    </text>
+</svg>

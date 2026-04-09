@@ -1,0 +1,222 @@
+﻿
+   FAIL  Tests\Feature\TaskTest
+  Γ£ô guest cannot vΓÇª 0.54s  
+  Γ¿» authenticatedΓÇª  1.15s  
+  Γ¿» user can creatΓÇª 0.52s  
+  Γ£ô user can updatΓÇª 0.03s  
+  Γ£ô user cannot upΓÇª 0.06s  
+  Γ£ô user can deletΓÇª 0.04s  
+  ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ  
+   FAILED  Tests\FeaturΓÇª   
+  Expected response status code [200] but received 500.
+Failed asserting that 500 is identical to 200.
+
+The following exception occurred during the last request:
+
+BadMethodCallException: Call to undefined method App\Models\User::tasks() in C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Support\Traits\ForwardsCalls.php:67
+Stack trace:
+#0 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Support\Traits\ForwardsCalls.php(36): Illuminate\Database\Eloquent\Model::throwBadMethodCallException('tasks')
+#1 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(2793): Illuminate\Database\Eloquent\Model->forwardCallTo(Object(Illuminate\Database\Eloquent\Builder), 'tasks', Array)
+#2 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\app\Http\Controllers\TaskController.php(18): Illuminate\Database\Eloquent\Model->__call('tasks', Array)
+#3 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Routing\ControllerDispatcher.php(46): App\Http\Controllers\TaskController->index(Object(Illuminate\Http\Request))
+#4 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Routing\Route.php(269): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(App\Http\Controllers\TaskController), 'index')
+#5 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Routing\Route.php(215): Illuminate\Routing\Route->runController()
+#6 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Routing\Router.php(822): Illuminate\Routing\Route->run()
+#7 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(180): Illuminate\Routing\Router->{closure:Illuminate\Routing\Router::runRouteWithinStack():821}(Object(Illuminate\Http\Request))
+#8 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Auth\Middleware\EnsureEmailIsVerified.php(41): Illuminate\Pipeline\Pipeline->{closure:Illuminate\Pipeline\Pipeline::prepareDestination():178}(Object(Illuminate\Http\Request))
+#9 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(219): Illuminate\Auth\Middleware\EnsureEmailIsVerified->handle(Object(Illuminate\Http\Request), Object(Closure))
+#10 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Http\Middleware\AddLinkHeadersForPreloadedAssets.php(32): Illuminate\Pipeline\Pipeline->{closure:{closure:Illuminate\Pipeline\Pipeline::carry():194}:195}(Object(Illuminate\Http\Request))
+#11 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(219): Illuminate\Http\Middleware\AddLinkHeadersForPreloadedAssets->handle(Object(Illuminate\Http\Request), Object(Closure))
+#12 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\inertiajs\inertia-laravel\src\Middleware.php(122): Illuminate\Pipeline\Pipeline->{closure:{closure:Illuminate\Pipeline\Pipeline::carry():194}:195}(Object(Illuminate\Http\Request))
+#13 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(219): Inertia\Middleware->handle(Object(Illuminate\Http\Request), Object(Closure))
+#14 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Routing\Middleware\SubstituteBindings.php(52): Illuminate\Pipeline\Pipeline->{closure:{closure:Illuminate\Pipeline\Pipeline::carry():194}:195}(Object(Illuminate\Http\Request))
+#15 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(219): Illuminate\Routing\Middleware\SubstituteBindings->handle(Object(Illuminate\Http\Request), Object(Closure))
+#16 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Auth\Middleware\Authenticate.php(63): Illuminate\Pipeline\Pipeline->{closure:{closure:Illuminate\Pipeline\Pipeline::carry():194}:195}(Object(Illuminate\Http\Request))
+#17 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(219): Illuminate\Auth\Middleware\Authenticate->handle(Object(Illuminate\Http\Request), Object(Closure))
+#18 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\PreventRequestForgery.php(104): Illuminate\Pipeline\Pipeline->{closure:{closure:Illuminate\Pipeline\Pipeline::carry():194}:195}(Object(Illuminate\Http\Request))
+#19 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(219): Illuminate\Foundation\Http\Middleware\PreventRequestForgery->handle(Object(Illuminate\Http\Request), Object(Closure))
+#20 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\View\Middleware\ShareErrorsFromSession.php(48): Illuminate\Pipeline\Pipeline->{closure:{closure:Illuminate\Pipeline\Pipeline::carry():194}:195}(Object(Illuminate\Http\Request))
+#21 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(219): Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#22 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Session\Middleware\StartSession.php(120): Illuminate\Pipeline\Pipeline->{closure:{closure:Illuminate\Pipeline\Pipeline::carry():194}:195}(Object(Illuminate\Http\Request))
+#23 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Session\Middleware\StartSession.php(63): Illuminate\Session\Middleware\StartSession->handleStatefulRequest(Object(Illuminate\Http\Request), Object(Illuminate\Session\Store), Object(Closure))
+#24 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(219): Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#25 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse.php(36): Illuminate\Pipeline\Pipeline->{closure:{closure:Illuminate\Pipeline\Pipeline::carry():194}:195}(Object(Illuminate\Http\Request))
+#26 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(219): Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+#27 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Cookie\Middleware\EncryptCookies.php(74): Illuminate\Pipeline\Pipeline->{closure:{closure:Illuminate\Pipeline\Pipeline::carry():194}:195}(Object(Illuminate\Http\Request))
+#28 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(219): Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#29 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(137): Illuminate\Pipeline\Pipeline->{closure:{closure:Illuminate\Pipeline\Pipeline::carry():194}:195}(Object(Illuminate\Http\Request))
+#30 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Routing\Router.php(821): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#31 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Routing\Router.php(800): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#32 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Routing\Router.php(764): Illuminate\Routing\Router->runRoute(Object(Illuminate\Http\Request), Object(Illuminate\Routing\Route))
+#33 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Routing\Router.php(753): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#34 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(200): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#35 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(180): Illuminate\Foundation\Http\Kernel->{closure:Illuminate\Foundation\Http\Kernel::dispatchToRouter():197}(Object(Illuminate\Http\Request))
+#36 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php(21): Illuminate\Pipeline\Pipeline->{closure:Illuminate\Pipeline\Pipeline::prepareDestination():178}(Object(Illuminate\Http\Request))
+#37 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull.php(31): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#38 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(219): Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull->handle(Object(Illuminate\Http\Request), Object(Closure))
+#39 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php(21): Illuminate\Pipeline\Pipeline->{closure:{closure:Illuminate\Pipeline\Pipeline::carry():194}:195}(Object(Illuminate\Http\Request))
+#40 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TrimStrings.php(51): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#41 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(219): Illuminate\Foundation\Http\Middleware\TrimStrings->handle(Object(Illuminate\Http\Request), Object(Closure))
+#42 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Http\Middleware\ValidatePostSize.php(27): Illuminate\Pipeline\Pipeline->{closure:{closure:Illuminate\Pipeline\Pipeline::carry():194}:195}(Object(Illuminate\Http\Request))
+#43 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(219): Illuminate\Http\Middleware\ValidatePostSize->handle(Object(Illuminate\Http\Request), Object(Closure))
+#44 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance.php(109): Illuminate\Pipeline\Pipeline->{closure:{closure:Illuminate\Pipeline\Pipeline::carry():194}:195}(Object(Illuminate\Http\Request))
+#45 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(219): Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance->handle(Object(Illuminate\Http\Request), Object(Closure))
+#46 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Http\Middleware\HandleCors.php(61): Illuminate\Pipeline\Pipeline->{closure:{closure:Illuminate\Pipeline\Pipeline::carry():194}:195}(Object(Illuminate\Http\Request))
+#47 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(219): Illuminate\Http\Middleware\HandleCors->handle(Object(Illuminate\Http\Request), Object(Closure))
+#48 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Http\Middleware\TrustProxies.php(58): Illuminate\Pipeline\Pipeline->{closure:{closure:Illuminate\Pipeline\Pipeline::carry():194}:195}(Object(Illuminate\Http\Request))
+#49 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(219): Illuminate\Http\Middleware\TrustProxies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#50 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\InvokeDeferredCallbacks.php(22): Illuminate\Pipeline\Pipeline->{closure:{closure:Illuminate\Pipeline\Pipeline::carry():194}:195}(Object(Illuminate\Http\Request))
+#51 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(219): Illuminate\Foundation\Http\Middleware\InvokeDeferredCallbacks->handle(Object(Illuminate\Http\Request), Object(Closure))
+#52 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Http\Middleware\ValidatePathEncoding.php(28): Illuminate\Pipeline\Pipeline->{closure:{closure:Illuminate\Pipeline\Pipeline::carry():194}:195}(Object(Illuminate\Http\Request))
+#53 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(219): Illuminate\Http\Middleware\ValidatePathEncoding->handle(Object(Illuminate\Http\Request), Object(Closure))
+#54 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(137): Illuminate\Pipeline\Pipeline->{closure:{closure:Illuminate\Pipeline\Pipeline::carry():194}:195}(Object(Illuminate\Http\Request))
+#55 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(175): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#56 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(144): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#57 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Foundation\Testing\Concerns\MakesHttpRequests.php(607): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#58 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Foundation\Testing\Concerns\MakesHttpRequests.php(368): Illuminate\Foundation\Testing\TestCase->call('GET', '/tasks', Array, Array, Array, Array)
+#59 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\tests\Feature\TaskTest.php(15): Illuminate\Foundation\Testing\TestCase->get('/tasks')
+#60 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\pestphp\pest\src\Factories\TestCaseMethodFactory.php(172): P\Tests\Feature\TaskTest->{closure:C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\tests\Feature\TaskTest.php:11}()
+#61 [internal function]: P\Tests\Feature\TaskTest->{closure:Pest\Factories\TestCaseMethodFactory::getClosure():162}()
+#62 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\pestphp\pest\src\Concerns\Testable.php(429): call_user_func_array(Object(Closure), Array)
+#63 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\pestphp\pest\src\Support\ExceptionTrace.php(26): P\Tests\Feature\TaskTest->{closure:Pest\Concerns\Testable::__callClosure():429}()
+#64 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\pestphp\pest\src\Concerns\Testable.php(429): Pest\Support\ExceptionTrace::ensure(Object(Closure))
+#65 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\pestphp\pest\src\Concerns\Testable.php(331): P\Tests\Feature\TaskTest->__callClosure(Object(Closure), Array)
+#66 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\pestphp\pest\src\Factories\TestCaseFactory.php(175) : eval()'d code(26): P\Tests\Feature\TaskTest->__runTest(Object(Closure))
+#67 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\phpunit\phpunit\src\Framework\TestCase.php(1332): P\Tests\Feature\TaskTest->__pest_evaluable_authenticated_user_can_view_their_tasks()
+#68 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\phpunit\phpunit\src\Framework\TestCase.php(519): PHPUnit\Framework\TestCase->runTest()
+#69 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\phpunit\phpunit\src\Framework\TestRunner\TestRunner.php(99): PHPUnit\Framework\TestCase->runBare()
+#70 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\phpunit\phpunit\src\Framework\TestCase.php(359): PHPUnit\Framework\TestRunner->run(Object(P\Tests\Feature\TaskTest))
+#71 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\phpunit\phpunit\src\Framework\TestSuite.php(374): PHPUnit\Framework\TestCase->run()
+#72 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\phpunit\phpunit\src\Framework\TestSuite.php(374): PHPUnit\Framework\TestSuite->run()
+#73 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\phpunit\phpunit\src\Framework\TestSuite.php(374): PHPUnit\Framework\TestSuite->run()
+#74 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\phpunit\phpunit\src\TextUI\TestRunner.php(64): PHPUnit\Framework\TestSuite->run()
+#75 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\phpunit\phpunit\src\TextUI\Application.php(229): PHPUnit\TextUI\TestRunner->run(Object(PHPUnit\TextUI\Configuration\Configuration), Object(PHPUnit\Runner\ResultCache\DefaultResultCache), Object(PHPUnit\Framework\TestSuite))
+#76 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\pestphp\pest\src\Kernel.php(103): PHPUnit\TextUI\Application->run(Array)
+#77 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\pestphp\pest\bin\pest(184): Pest\Kernel->handle(Array, Array)
+#78 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\pestphp\pest\bin\pest(192): {closure:C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\pestphp\pest\bin\pest:18}()
+#79 {main}
+
+----------------------------------------------------------------------------------
+
+Call to undefined method App\Models\User::tasks()
+
+  at tests\Feature\TaskTest.php:17
+     13Γûò     Task::factory(3)->create(['user_id' => $user->id]);
+     14Γûò 
+     15Γûò     $response = $this->actingAs($user)->get('/tasks');
+     16Γûò 
+  Γ₧£  17Γûò     $response->assertStatus(200);
+     18Γûò });
+     19Γûò 
+     20Γûò test('user can create a task', function () {
+     21Γûò     $user = User::factory()->create();
+
+  ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ  
+   FAILED  Tests\FeaturΓÇª   
+  Expected response status code [201, 301, 302, 303, 307, 308] but received 500.
+Failed asserting that false is true.
+
+The following exception occurred during the last request:
+
+BadMethodCallException: Call to undefined method App\Models\User::tasks() in C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Support\Traits\ForwardsCalls.php:67
+Stack trace:
+#0 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Support\Traits\ForwardsCalls.php(36): Illuminate\Database\Eloquent\Model::throwBadMethodCallException('tasks')
+#1 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(2793): Illuminate\Database\Eloquent\Model->forwardCallTo(Object(Illuminate\Database\Eloquent\Builder), 'tasks', Array)
+#2 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\app\Http\Controllers\TaskController.php(30): Illuminate\Database\Eloquent\Model->__call('tasks', Array)
+#3 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Routing\ControllerDispatcher.php(46): App\Http\Controllers\TaskController->store(Object(App\Http\Requests\StoreTaskRequest))
+#4 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Routing\Route.php(269): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(App\Http\Controllers\TaskController), 'store')
+#5 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Routing\Route.php(215): Illuminate\Routing\Route->runController()
+#6 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Routing\Router.php(822): Illuminate\Routing\Route->run()
+#7 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(180): Illuminate\Routing\Router->{closure:Illuminate\Routing\Router::runRouteWithinStack():821}(Object(Illuminate\Http\Request))
+#8 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Auth\Middleware\EnsureEmailIsVerified.php(41): Illuminate\Pipeline\Pipeline->{closure:Illuminate\Pipeline\Pipeline::prepareDestination():178}(Object(Illuminate\Http\Request))
+#9 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(219): Illuminate\Auth\Middleware\EnsureEmailIsVerified->handle(Object(Illuminate\Http\Request), Object(Closure))
+#10 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Http\Middleware\AddLinkHeadersForPreloadedAssets.php(32): Illuminate\Pipeline\Pipeline->{closure:{closure:Illuminate\Pipeline\Pipeline::carry():194}:195}(Object(Illuminate\Http\Request))
+#11 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(219): Illuminate\Http\Middleware\AddLinkHeadersForPreloadedAssets->handle(Object(Illuminate\Http\Request), Object(Closure))
+#12 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\inertiajs\inertia-laravel\src\Middleware.php(122): Illuminate\Pipeline\Pipeline->{closure:{closure:Illuminate\Pipeline\Pipeline::carry():194}:195}(Object(Illuminate\Http\Request))
+#13 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(219): Inertia\Middleware->handle(Object(Illuminate\Http\Request), Object(Closure))
+#14 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Routing\Middleware\SubstituteBindings.php(52): Illuminate\Pipeline\Pipeline->{closure:{closure:Illuminate\Pipeline\Pipeline::carry():194}:195}(Object(Illuminate\Http\Request))
+#15 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(219): Illuminate\Routing\Middleware\SubstituteBindings->handle(Object(Illuminate\Http\Request), Object(Closure))
+#16 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Auth\Middleware\Authenticate.php(63): Illuminate\Pipeline\Pipeline->{closure:{closure:Illuminate\Pipeline\Pipeline::carry():194}:195}(Object(Illuminate\Http\Request))
+#17 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(219): Illuminate\Auth\Middleware\Authenticate->handle(Object(Illuminate\Http\Request), Object(Closure))
+#18 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\PreventRequestForgery.php(104): Illuminate\Pipeline\Pipeline->{closure:{closure:Illuminate\Pipeline\Pipeline::carry():194}:195}(Object(Illuminate\Http\Request))
+#19 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(219): Illuminate\Foundation\Http\Middleware\PreventRequestForgery->handle(Object(Illuminate\Http\Request), Object(Closure))
+#20 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\View\Middleware\ShareErrorsFromSession.php(48): Illuminate\Pipeline\Pipeline->{closure:{closure:Illuminate\Pipeline\Pipeline::carry():194}:195}(Object(Illuminate\Http\Request))
+#21 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(219): Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#22 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Session\Middleware\StartSession.php(120): Illuminate\Pipeline\Pipeline->{closure:{closure:Illuminate\Pipeline\Pipeline::carry():194}:195}(Object(Illuminate\Http\Request))
+#23 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Session\Middleware\StartSession.php(63): Illuminate\Session\Middleware\StartSession->handleStatefulRequest(Object(Illuminate\Http\Request), Object(Illuminate\Session\Store), Object(Closure))
+#24 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(219): Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#25 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse.php(36): Illuminate\Pipeline\Pipeline->{closure:{closure:Illuminate\Pipeline\Pipeline::carry():194}:195}(Object(Illuminate\Http\Request))
+#26 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(219): Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+#27 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Cookie\Middleware\EncryptCookies.php(74): Illuminate\Pipeline\Pipeline->{closure:{closure:Illuminate\Pipeline\Pipeline::carry():194}:195}(Object(Illuminate\Http\Request))
+#28 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(219): Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#29 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(137): Illuminate\Pipeline\Pipeline->{closure:{closure:Illuminate\Pipeline\Pipeline::carry():194}:195}(Object(Illuminate\Http\Request))
+#30 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Routing\Router.php(821): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#31 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Routing\Router.php(800): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#32 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Routing\Router.php(764): Illuminate\Routing\Router->runRoute(Object(Illuminate\Http\Request), Object(Illuminate\Routing\Route))
+#33 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Routing\Router.php(753): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#34 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(200): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#35 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(180): Illuminate\Foundation\Http\Kernel->{closure:Illuminate\Foundation\Http\Kernel::dispatchToRouter():197}(Object(Illuminate\Http\Request))
+#36 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php(21): Illuminate\Pipeline\Pipeline->{closure:Illuminate\Pipeline\Pipeline::prepareDestination():178}(Object(Illuminate\Http\Request))
+#37 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull.php(31): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#38 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(219): Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull->handle(Object(Illuminate\Http\Request), Object(Closure))
+#39 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php(21): Illuminate\Pipeline\Pipeline->{closure:{closure:Illuminate\Pipeline\Pipeline::carry():194}:195}(Object(Illuminate\Http\Request))
+#40 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TrimStrings.php(51): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#41 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(219): Illuminate\Foundation\Http\Middleware\TrimStrings->handle(Object(Illuminate\Http\Request), Object(Closure))
+#42 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Http\Middleware\ValidatePostSize.php(27): Illuminate\Pipeline\Pipeline->{closure:{closure:Illuminate\Pipeline\Pipeline::carry():194}:195}(Object(Illuminate\Http\Request))
+#43 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(219): Illuminate\Http\Middleware\ValidatePostSize->handle(Object(Illuminate\Http\Request), Object(Closure))
+#44 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance.php(109): Illuminate\Pipeline\Pipeline->{closure:{closure:Illuminate\Pipeline\Pipeline::carry():194}:195}(Object(Illuminate\Http\Request))
+#45 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(219): Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance->handle(Object(Illuminate\Http\Request), Object(Closure))
+#46 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Http\Middleware\HandleCors.php(61): Illuminate\Pipeline\Pipeline->{closure:{closure:Illuminate\Pipeline\Pipeline::carry():194}:195}(Object(Illuminate\Http\Request))
+#47 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(219): Illuminate\Http\Middleware\HandleCors->handle(Object(Illuminate\Http\Request), Object(Closure))
+#48 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Http\Middleware\TrustProxies.php(58): Illuminate\Pipeline\Pipeline->{closure:{closure:Illuminate\Pipeline\Pipeline::carry():194}:195}(Object(Illuminate\Http\Request))
+#49 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(219): Illuminate\Http\Middleware\TrustProxies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#50 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\InvokeDeferredCallbacks.php(22): Illuminate\Pipeline\Pipeline->{closure:{closure:Illuminate\Pipeline\Pipeline::carry():194}:195}(Object(Illuminate\Http\Request))
+#51 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(219): Illuminate\Foundation\Http\Middleware\InvokeDeferredCallbacks->handle(Object(Illuminate\Http\Request), Object(Closure))
+#52 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Http\Middleware\ValidatePathEncoding.php(28): Illuminate\Pipeline\Pipeline->{closure:{closure:Illuminate\Pipeline\Pipeline::carry():194}:195}(Object(Illuminate\Http\Request))
+#53 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(219): Illuminate\Http\Middleware\ValidatePathEncoding->handle(Object(Illuminate\Http\Request), Object(Closure))
+#54 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(137): Illuminate\Pipeline\Pipeline->{closure:{closure:Illuminate\Pipeline\Pipeline::carry():194}:195}(Object(Illuminate\Http\Request))
+#55 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(175): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#56 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(144): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#57 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Foundation\Testing\Concerns\MakesHttpRequests.php(607): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#58 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\laravel\framework\src\Illuminate\Foundation\Testing\Concerns\MakesHttpRequests.php(397): Illuminate\Foundation\Testing\TestCase->call('POST', '/tasks', Array, Array, Array, Array)
+#59 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\tests\Feature\TaskTest.php(23): Illuminate\Foundation\Testing\TestCase->post('/tasks', Array)
+#60 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\pestphp\pest\src\Factories\TestCaseMethodFactory.php(172): P\Tests\Feature\TaskTest->{closure:C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\tests\Feature\TaskTest.php:20}()
+#61 [internal function]: P\Tests\Feature\TaskTest->{closure:Pest\Factories\TestCaseMethodFactory::getClosure():162}()
+#62 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\pestphp\pest\src\Concerns\Testable.php(429): call_user_func_array(Object(Closure), Array)
+#63 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\pestphp\pest\src\Support\ExceptionTrace.php(26): P\Tests\Feature\TaskTest->{closure:Pest\Concerns\Testable::__callClosure():429}()
+#64 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\pestphp\pest\src\Concerns\Testable.php(429): Pest\Support\ExceptionTrace::ensure(Object(Closure))
+#65 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\pestphp\pest\src\Concerns\Testable.php(331): P\Tests\Feature\TaskTest->__callClosure(Object(Closure), Array)
+#66 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\pestphp\pest\src\Factories\TestCaseFactory.php(175) : eval()'d code(35): P\Tests\Feature\TaskTest->__runTest(Object(Closure))
+#67 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\phpunit\phpunit\src\Framework\TestCase.php(1332): P\Tests\Feature\TaskTest->__pest_evaluable_user_can_create_a_task()
+#68 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\phpunit\phpunit\src\Framework\TestCase.php(519): PHPUnit\Framework\TestCase->runTest()
+#69 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\phpunit\phpunit\src\Framework\TestRunner\TestRunner.php(99): PHPUnit\Framework\TestCase->runBare()
+#70 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\phpunit\phpunit\src\Framework\TestCase.php(359): PHPUnit\Framework\TestRunner->run(Object(P\Tests\Feature\TaskTest))
+#71 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\phpunit\phpunit\src\Framework\TestSuite.php(374): PHPUnit\Framework\TestCase->run()
+#72 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\phpunit\phpunit\src\Framework\TestSuite.php(374): PHPUnit\Framework\TestSuite->run()
+#73 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\phpunit\phpunit\src\Framework\TestSuite.php(374): PHPUnit\Framework\TestSuite->run()
+#74 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\phpunit\phpunit\src\TextUI\TestRunner.php(64): PHPUnit\Framework\TestSuite->run()
+#75 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\phpunit\phpunit\src\TextUI\Application.php(229): PHPUnit\TextUI\TestRunner->run(Object(PHPUnit\TextUI\Configuration\Configuration), Object(PHPUnit\Runner\ResultCache\DefaultResultCache), Object(PHPUnit\Framework\TestSuite))
+#76 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\pestphp\pest\src\Kernel.php(103): PHPUnit\TextUI\Application->run(Array)
+#77 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\pestphp\pest\bin\pest(184): Pest\Kernel->handle(Array, Array)
+#78 C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\pestphp\pest\bin\pest(192): {closure:C:\Users\takbi\OneDrive\Desktop\Laravel\Task Management System\vendor\pestphp\pest\bin\pest:18}()
+#79 {main}
+
+----------------------------------------------------------------------------------
+
+Call to undefined method App\Models\User::tasks()
+
+  at tests\Feature\TaskTest.php:29
+     25Γûò         'description' => 'Task description',
+     26Γûò         'status' => 'pending',
+     27Γûò     ]);
+     28Γûò 
+  Γ₧£  29Γûò     $response->assertRedirect('/tasks');
+     30Γûò     $this->assertDatabaseHas('tasks', [
+     31Γûò         'title' => 'My New Task',
+     32Γûò         'user_id' => $user->id,
+     33Γûò     ]);
+
+
+  Tests:    2 failed, 4 passed (12 assertions)
+  Duration: 2.73s
+
