@@ -9,13 +9,14 @@ RUN apt-get update && apt-get install -y \
     libxml2-dev \
     libpq-dev \
     libsqlite3-dev \
+    libzip-dev \
     zip \
     unzip \
     nodejs \
     npm
 
 # Install PHP extensions
-RUN docker-php-ext-install pdo pdo_pgsql pdo_sqlite mbstring exif pcntl bcmath gd
+RUN docker-php-ext-install pdo pdo_pgsql pdo_sqlite mbstring exif pcntl bcmath gd zip
 
 # Get latest Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
@@ -27,8 +28,8 @@ WORKDIR /app
 COPY . /app
 
 # Install PHP dependencies without running artisan scripts during build
-# (because .env variables aren't natively accessible during the Docker image build phase)
-RUN composer install --optimize-autoloader --no-dev --no-scripts
+RUN ENV COMPOSER_ALLOW_SUPERUSER=1
+RUN COMPOSER_MEMORY_LIMIT=-1 composer install --optimize-autoloader --no-dev --no-scripts --prefer-dist --no-interaction --ignore-platform-reqs
 
 # Install Node dependencies and build Vite
 RUN npm install
