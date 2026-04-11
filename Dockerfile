@@ -38,5 +38,5 @@ RUN npm run build
 # Expose port
 EXPOSE 8000
 
-# Start Laravel server at Runtime! (This runs after Render injects environment variables)
-CMD php artisan package:discover --ansi && php artisan serve --host=0.0.0.0 --port=8000
+# Start Laravel server at Runtime!
+CMD php artisan optimize:clear && php artisan migrate --force && php artisan serve --host=0.0.0.0 --port=8000
