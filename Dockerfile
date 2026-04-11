@@ -28,7 +28,7 @@ WORKDIR /app
 COPY . /app
 
 # Install PHP dependencies without running artisan scripts during build
-RUN ENV COMPOSER_ALLOW_SUPERUSER=1
+ENV COMPOSER_ALLOW_SUPERUSER=1
 RUN COMPOSER_MEMORY_LIMIT=-1 composer install --optimize-autoloader --no-dev --no-scripts --prefer-dist --no-interaction --ignore-platform-reqs
 
 # Install Node dependencies and build Vite
